@@ -140,6 +140,23 @@ header {
   transition: transform .18s ease;
   transform: translateX(0);
 }
+.wrapper .form-box.rememberforgot {
+  position: absolute;
+  transition: transform 0.18s ease;
+  transform: translateX(400px);
+}
+
+/* Quando a classe active-recupera for adicionada, exibe a tela de recuperação */
+.wrapper.active-remember .form-box.rememberforgot {
+  transform: translateX(0);
+  transition: transform 0.18s ease;
+}
+
+/* Opcional: oculta o formulário de login quando a recuperação estiver ativa */
+.wrapper.active-remember .form-box.login {
+  transform: translateX(-400px);
+  transition: transform 0.18s ease;
+}
 
 .wrapper .icon-close {
   position: absolute;
@@ -209,26 +226,14 @@ header {
 
 }
 
-.remember-forgot {
-  font-size: .9em;
-  color: #fff;
-  font-weight: 500;
-  margin: -15px 0 15px;
-  display: flex;
-  justify-content: space-between;
-}
 
-.remember-forgot label input {
-  accent-color: #fff;
-  margin-right: 3px;
-}
 
-.remember-forgot a {
+.rememberforgot a {
   color: #fff;
   text-decoration: none;
 }
 
-.remember-forgot a:hover {
+.rememberforgot a:hover {
   text-decoration: underline;
 }
 
@@ -262,3 +267,22 @@ header {
 .login-register p a:hover {
   text-decoration: underline;
 }
+
+.login-rememberforgot {
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-rememberforgot p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-rememberforgot p a:hover {
+  text-decoration: underline;
+}
+
