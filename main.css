@@ -158,6 +158,24 @@ header {
   transition: transform 0.18s ease;
 }
 
+.wrapper .form-box.redefinir {
+  position: absolute;
+  transition: transform 0.18s ease;
+  transform: translateX(400px);
+}
+
+
+.wrapper.active-redefinir .form-box.redefinir {
+  transform: translateX(0);
+  transition: transform 0.18s ease;
+}
+
+/* Opcional: oculta o formulário de login quando a recuperação estiver ativa */
+.wrapper.active-redefinir .form-box.login {
+  transform: translateX(-400px);
+  transition: transform 0.18s ease;
+}
+
 .wrapper .icon-close {
   position: absolute;
   top: 0;
@@ -227,7 +245,6 @@ header {
 }
 
 
-
 .rememberforgot a {
   color: #fff;
   text-decoration: none;
@@ -268,6 +285,7 @@ header {
   text-decoration: underline;
 }
 
+
 .login-rememberforgot {
   font-size: .9em;
   color: #fff;
@@ -283,6 +301,42 @@ header {
 }
 
 .login-rememberforgot p a:hover {
+  text-decoration: underline;
+}
+
+.login-redefinir {
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-redefinir p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-redefinir p a:hover {
+  text-decoration: underline;
+}
+
+.rememberforgot-redefinir {
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.rememberforgot-redefinir p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.rememberforgot-redefinir p a:hover {
   text-decoration: underline;
 }
 

@@ -2,7 +2,16 @@ const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
 const rememberforgotLink = document.querySelector('.rememberforgot-link');
+const redefinirLink = document.querySelector('.redefinir-link');
 
+const loginLinks = document.querySelectorAll('.login-link');
+
+loginLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    wrapper.classList.remove('active', 'active-remember', 'active-redefinir');
+  });
+});
 
 const btnPopup = document.querySelector('.btnLogin-popup');
 
@@ -18,10 +27,14 @@ rememberforgotLink.addEventListener('click', ()=> {
     wrapper.classList.remove('active'); // remove registro, por exemplo
     wrapper.classList.add('active-remember');
 });
-
+redefinirLink.addEventListener('click', ()=> {
+    wrapper.classList.remove('active'); // remove registro, por exemplo
+    wrapper.classList.add('active-redefinir');
+});
 loginLink.addEventListener('click', (e) => {
     e.preventDefault();
-    wrapper.classList.remove('active', 'active-remember');
+    wrapper.classList.remove('active', 'active-remember', 'active-redefinir');
+   
 });
 
 btnPopup.addEventListener('click', ()=> {
@@ -31,3 +44,4 @@ btnPopup.addEventListener('click', ()=> {
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup');
 });
+
