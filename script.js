@@ -24,13 +24,16 @@ registerLink.addEventListener('click', ()=> {
 });
 
 rememberforgotLink.addEventListener('click', ()=> {
-    wrapper.classList.remove('active'); // remove registro, por exemplo
+    wrapper.classList.remove('active');
     wrapper.classList.add('active-remember');
 });
-redefinirLink.addEventListener('click', ()=> {
-    wrapper.classList.remove('active'); // remove registro, por exemplo
+
+redefinirLink.addEventListener('click', () => {
+    wrapper.classList.remove('active', 'active-remember', 'active-redefinir');
     wrapper.classList.add('active-redefinir');
 });
+
+
 loginLink.addEventListener('click', (e) => {
     e.preventDefault();
     wrapper.classList.remove('active', 'active-remember', 'active-redefinir');

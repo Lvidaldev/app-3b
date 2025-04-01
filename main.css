@@ -65,6 +65,24 @@ header {
     
 }
 
+@media (max-width: 600px) {
+  header {
+    padding: 10px 20px;
+  }
+  .navigation a {
+    margin-left: 20px;
+    font-size: 0.9em;
+  }
+  .wrapper {
+    width: 95%;
+    height: auto; /* Permite que o conteúdo ajuste a altura */
+    padding: 20px;
+  }
+  .form-box {
+    padding: 20px;
+  }
+}
+
 .navigation .btnLogin-popup {
     width: 130px;
     height: 50px;
@@ -88,7 +106,8 @@ header {
 
 .wrapper {
   position: relative;
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
   height: 440px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, .5);
@@ -146,13 +165,11 @@ header {
   transform: translateX(400px);
 }
 
-/* Quando a classe active-recupera for adicionada, exibe a tela de recuperação */
 .wrapper.active-remember .form-box.rememberforgot {
   transform: translateX(0);
   transition: transform 0.18s ease;
 }
 
-/* Opcional: oculta o formulário de login quando a recuperação estiver ativa */
 .wrapper.active-remember .form-box.login {
   transform: translateX(-400px);
   transition: transform 0.18s ease;
@@ -164,17 +181,16 @@ header {
   transform: translateX(400px);
 }
 
-
 .wrapper.active-redefinir .form-box.redefinir {
   transform: translateX(0);
   transition: transform 0.18s ease;
 }
 
-/* Opcional: oculta o formulário de login quando a recuperação estiver ativa */
 .wrapper.active-redefinir .form-box.login {
   transform: translateX(-400px);
   transition: transform 0.18s ease;
 }
+
 
 .wrapper .icon-close {
   position: absolute;
@@ -251,6 +267,15 @@ header {
 }
 
 .rememberforgot a:hover {
+  text-decoration: underline;
+}
+
+.redefinir a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.redefinir a:hover {
   text-decoration: underline;
 }
 
